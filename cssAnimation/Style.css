@@ -17,6 +17,7 @@ li{
     list-style-type: none;
 }
 
+/* box practice start */
 
 .wrapper{
     display: flex;
@@ -78,7 +79,7 @@ li{
 
   
 
-
+  /* ball bounce animation start */
 
 
   .background{
@@ -169,7 +170,7 @@ li{
 }
 
 
-
+/* background animation start */
 
 
 .bg-animation{
@@ -276,7 +277,7 @@ li{
     }
 }
 
-/* humburger-menu  */
+/* humburger menu start  */
 
 
 .humburger-menu{
@@ -294,7 +295,7 @@ li{
 .menubar-btn{
     background: #998176;
     padding: 5px 15px;
-   border: none;
+    border: none;
     border-radius: 100%;
     display: block;
     height: 50px;
@@ -358,7 +359,7 @@ button.menubar-btn input:checked ~ .span:after {
     top: 0;
 }
 
-
+/* theme animation start */
 
 .theme-animation{
     background-color: darkgray;
@@ -438,7 +439,7 @@ button.menubar-btn input:checked ~ .span:after {
 
 
 
-/* liner */
+/* linear animation start */
 
 .liner{
     height: 200px;
@@ -598,9 +599,12 @@ button.menubar-btn input:checked ~ .span:after {
       width: 100%;
     }
   }
-  
+
+
+
+  /* exercise animation practice  */
  
-  .part-box{
+  .exercise-box{
     height: 350px;
     margin-top: 50px;
   }
@@ -735,12 +739,174 @@ button.menubar-btn input:checked ~ .span:after {
   .mainpart :nth-child(5){
     animation: boxalertfive 3s linear infinite alternate;
   }
-  
-  
-  
+
   .mainpart:hover{
     animation-play-state: paused;
   }
   
- 
-  
+
+  /* round practice */
+
+.round-bg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+}
+  .circle{
+    position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 10px 0.5px #f05304;
+   
+  }
+ .first{
+     background-color: #579c29; 
+     width: 100px;
+     height: 100px;
+     z-index: 4;
+     opacity: 0.8;
+    }
+    .second{
+        background-color: #ffffff;
+        width: 200px;
+        height: 200px;
+        z-index: 3;
+        opacity: 0.9;
+    }
+    .third{
+    background: rgb(254, 144, 0);
+    width: 300px;
+    height: 300px;
+    z-index: 2;
+    opacity: 0.7;
+  }
+  @keyframes ripple{
+    0%{
+      transform: scale(0.8);
+    }
+    
+    50%{
+      transform: scale(1.2);
+    }
+    
+    100%{
+      transform: scale(0.8);
+    }
+  }
+
+
+
+  /* exercise practice box */
+
+  .exercises{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 200px;
+  }
+  .box-darkgrey{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkgrey;
+  }
+  .brown-box{
+    width: 50px;
+    height: 50px;
+    background-color: darkcyan;
+    border-radius: 50%;  
+    animation: dark-square 3s linear infinite;
+  }
+
+  @keyframes dark-square {
+    0%{
+        border-radius: 50%;
+    }
+    20%{
+        border-radius: 50%;
+        background-color: darkcyan;
+    }
+    50%{
+        border-radius: 0%;
+        background-color: #ffffff;
+        transform: rotate(0deg);
+    }
+    75%{
+        border-radius: 0%;
+        background-color: #ffffff;
+        transform: rotate(90deg);
+    }
+    100%{
+        border-radius: 50%;
+        background-color: darkcyan;
+        transform: rotate(90deg);
+    }
+  }
+
+
+  .second-box{
+    width: 50px;
+    height: 50px;
+    background-color: darkcyan;
+    border-radius: 50%;  
+    animation: pulse-square 3s linear infinite;
+  }
+  @keyframes pulse-square {
+    0%, 25%, 29% { 
+        transform: scale(1.2); 
+        opacity: 0.8;
+    }
+
+    3%, 30%, 35%, 42% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* rotate box */
+
+.yellow-box-wrapper{
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 200px;
+}
+.yellow-box{
+    width: 100px;
+    height: 100px;
+    background-color:#ffe672;
+    animation: horizontalbox 2s ease infinite;
+}
+.yellow-box .para{
+    text-align: center;
+    padding-top: 30px;
+    color: darkred;
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+@keyframes horizontalbox {
+    0% {
+        filter:blur(4px);
+        opacity:0;
+        transform:translateX(-800px) rotate(-540deg);
+    }
+    50% {
+        filter:blur(0);
+        opacity:1;
+        transform:translateX(0) rotate(0deg);
+    }
+    100% {
+        filter:blur(0);
+        opacity:0;
+        transform:translateX(800px) rotate(540deg);
+    }
+}
