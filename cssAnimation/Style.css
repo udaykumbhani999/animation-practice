@@ -17,7 +17,42 @@ li{
     list-style-type: none;
 }
 
+
+
 /* box practice start */
+
+.header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   background-color: #000000;
+   padding: 0px 32px;
+}
+.logo a{
+    color: white;
+    font-family: monospace;
+    font-size: 25px;
+    line-height: 32px;
+    text-decoration: none;
+}
+.item {
+    display: flex;
+    gap: 40px;
+}
+.item .list-item{
+    color: white;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    padding: 20px 0px;
+}
+
+
+
+
+
+
 
 .wrapper{
     display: flex;
@@ -882,7 +917,7 @@ button.menubar-btn input:checked ~ .span:after {
     width: 100px;
     height: 100px;
     background-color:#ffe672;
-    animation: horizontalbox 2s ease infinite;
+    animation: horizontalbox 5s ease infinite;
 }
 .yellow-box .para{
     text-align: center;
@@ -910,3 +945,52 @@ button.menubar-btn input:checked ~ .span:after {
         transform:translateX(800px) rotate(540deg);
     }
 }
+
+.demowork{
+    height: 100%;
+    background-color: darkgrey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.greenbox{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    font-family: monospace;
+    font-size: 16px;
+    position: relative;
+    animation: timingvalue 5s infinite alternate;
+}
+.linear{
+    animation-timing-function: linear;
+}
+.ease{
+    animation-timing-function: ease;
+}
+.ease-in{
+    animation-timing-function: ease-in;
+}
+.ease-out{
+    animation-timing-function: ease-out;
+}
+.ease-in-out{
+    animation-timing-function: ease-in-out;
+}
+.steps{
+    animation-timing-function: steps(6);
+}
+.cubic-bezier{
+    animation-timing-function: cubic-bezier(0.1, 1.0, 1.0, 0.1);
+}
+.fill-mode{
+    animation-fill-mode: forwards;  
+}
+
+@keyframes timingvalue {
+    0% {left: 0px;}
+    100% {left: 50%;}
+  }
